@@ -9,11 +9,15 @@ function myFunction() {
     document.body.style.color = "#000";
     $(".nav-link").css("color", "#000");
     $(".navbar-collapse ul").css("background-color", "#f4f4ff");
+    $(".about h2").css("color", "#000");
+    $(".about h2 a").css("color", "#000");
   } else {
     document.body.style.background = "black";
     document.body.style.color = "#FFF";
     $(".nav-link").css("color", "#FFF");
     $(".navbar-collapse ul").css("background-color", "#000");
+    $(".about h2").css("color", "#FFF");
+    $(".about h2 a").css("color", "#FFF");
   }
 }
 $("#open").click(function () {

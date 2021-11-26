@@ -163,3 +163,31 @@ input:checked+.slider:before {
   font-weight: bold;
   text-shadow: 9px 9px 5px rgba(81, 209, 248, 0.722);
 }
+
+.skills {
+  margin-top: 5rem;
+}
+
+.about span {
+  font-size: 16px;
+  color: #2196F3;
+  font-weight: bold;
+}
+
+.about h2 {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 1.5rem;
+}
+
+.about h2 a {
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+}
+
+.about h1 {
+  font-size: 60px;
+  font-weight: bold;
+  text-shadow: 9px 9px 5px rgba(81, 209, 248, 0.722);
+}
