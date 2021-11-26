@@ -1,3 +1,24 @@
+const links = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('.forJS');
+
+function changeLinkState() {
+  let index = sections.length;
+
+  while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+
+  links.forEach((link) => link.classList.remove('active'));
+
+  // add the active class if within visible height of the element
+  if (scrollY - sections[index].offsetHeight <
+        sections[index].offsetTop) {
+    links[index].classList.add('active');
+  }
+}
+
+changeLinkState();
+window.addEventListener('scroll', changeLinkState);
+
+
 document.getElementById("toggleSwitch").onclick = function () {
   myFunction();
 };
@@ -7,17 +28,25 @@ function myFunction() {
   if (bg === "black") {
     document.body.style.background = "#f4f4ff";
     document.body.style.color = "#000";
+    document.querySelector("style").textContent +=
+    "@media screen and (max-width:999px) { .navbar-collapse ul { background-color: #f4f4ff; }}";
     $(".nav-link").css("color", "#000");
-    $(".navbar-collapse ul").css("background-color", "#f4f4ff");
+    // $(".navbar-collapse ul").css("background-color", "#f4f4ff");
     $(".about h2").css("color", "#000");
-    $(".about h2 a").css("color", "#000");
+    $(".about span a").css("color", "#000");
+    $(".about i").css("box-shadow", "2px 2px 5px #000");
+    $(".skills").css("background-color", "#FFF");
   } else {
     document.body.style.background = "black";
     document.body.style.color = "#FFF";
+    document.querySelector("style").textContent +=
+    "@media screen and (max-width:999px) { .navbar-collapse ul { background-color: #000; }}";
     $(".nav-link").css("color", "#FFF");
-    $(".navbar-collapse ul").css("background-color", "#000");
+    // $(".navbar-collapse ul").css("background-color", "#000");
     $(".about h2").css("color", "#FFF");
-    $(".about h2 a").css("color", "#FFF");
+    $(".about span a").css("color", "#FFF");
+    $(".about i").css("box-shadow", "2px 2px 5px #FFF");
+    $(".skills").css("background-color", "#000");
   }
 }
 $("#open").click(function () {
@@ -54,3 +83,41 @@ $(document).ready(function () {
     anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
   });
 });
+
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+
+
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 800px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
