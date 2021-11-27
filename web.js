@@ -59,6 +59,12 @@ $(".fa-times").click(function () {
   $(".fa-times").css("display", "none");
   $("#open").css("display", "block");
 });
+$(".nav-link").click(function () {
+  $("body").css("overflow-y", "scroll");
+  $(".navbar-collapse").removeClass("show");
+  $(".fa-times").css("display", "none");
+  $("#open").css("display", "block");
+});
 
 // Animation on Scroll
 $(document).ready(function () {
@@ -121,3 +127,85 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+// $(".card img").hover(function(){
+//   $(".card-body").css("display", "block");
+//   $(".card").css("border", "1px solid #DDD");
+//   }, function(){
+//   $(".card-body").css("display", "none");
+//   $(".card").css("border", "none");
+// });
+
+// $(".card img").on("mouseenter", function(){
+// 	$(".card-body").addClass("hide");
+//   $(this).removeClass("hide");
+//   $(".card").$(this).children(".card-body");
+// })
+// $(".card img").on("mouseleave", function(){
+// 	// $(".card-body").removeClass("hide");
+// 	$(".card-body").addClass("hide");
+// })
+
+// $(document).ready(function() {
+//   $(".card img").hover(function(){
+//     $(this).next().css("display", "block");
+//     $(this).parent().css("border", "1px solid #DDD");
+//     $(this).css("border-radius", "12px 12px 0px 0px");
+//   }, function(){
+//     $(".card-body").css("display", "none");
+//     $(".card").css("border", "none");
+//     $(this).css("border-radius", "12px 12px 12px 12px");
+//   });	
+// });
+
+$(document).ready(function() {
+  $(".card").hover(function(){
+    $(this).children("div").css("display", "block");
+    $(this).css("border", "1px solid #DDD");
+    $(this).children("img").css("border-radius", "12px 12px 0px 0px");
+    $(this).children("img").css("width", "100%");
+    $(this).children("img").css("box-shadow", "none");
+  }, function(){
+    $(this).children("div").css("display", "none");
+    $(this).css("border", "none");
+    $(this).children("img").css("border-radius", "12px 12px 12px 12px");
+    $(this).children("img").css("width", "80%");
+    $(this).children("img").css("box-shadow", "5px 5px 5px #DDD");
+  });	
+});
+
+(function ($){
+  $.fn.counter = function() {
+    const $this = $(this),
+    numberFrom = parseInt($this.attr('data-from')),
+    numberTo = parseInt($this.attr('data-to')),
+    delta = numberTo - numberFrom,
+    deltaPositive = delta > 0 ? true : false,
+    time = parseInt($this.attr('data-time')),
+    changeTime = 10;
+    
+    let currentNumber = numberFrom,
+    value = delta*changeTime/time;
+    var interval1;
+    const changeNumber = () => {
+      currentNumber += value;
+      //checks if currentNumber reached numberTo
+      (deltaPositive && currentNumber >= numberTo) || (!deltaPositive &&currentNumber<= numberTo) ? currentNumber=numberTo : currentNumber;
+      this.text(parseInt(currentNumber));
+      currentNumber == numberTo ? clearInterval(interval1) : currentNumber;  
+    }
+
+    interval1 = setInterval(changeNumber,changeTime);
+  }
+}(jQuery));
+
+$(document).ready(function(){
+
+  $('.count-up').counter();
+  $('.count1').counter();
+  $('.count2').counter();
+  
+  new WOW().init();
+});
+
+
