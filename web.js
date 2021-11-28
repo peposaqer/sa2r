@@ -1,23 +1,21 @@
-const links = document.querySelectorAll('.nav-link');
-const sections = document.querySelectorAll('.forJS');
+const links = document.querySelectorAll(".nav-link");
+const sections = document.querySelectorAll(".forJS");
 
 function changeLinkState() {
   let index = sections.length;
 
   while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
 
-  links.forEach((link) => link.classList.remove('active'));
+  links.forEach((link) => link.classList.remove("active"));
 
   // add the active class if within visible height of the element
-  if (scrollY - sections[index].offsetHeight <
-        sections[index].offsetTop) {
-    links[index].classList.add('active');
+  if (scrollY - sections[index].offsetHeight < sections[index].offsetTop) {
+    links[index].classList.add("active");
   }
 }
 
 changeLinkState();
-window.addEventListener('scroll', changeLinkState);
-
+window.addEventListener("scroll", changeLinkState);
 
 document.getElementById("toggleSwitch").onclick = function () {
   myFunction();
@@ -29,7 +27,7 @@ function myFunction() {
     document.body.style.background = "#f4f4ff";
     document.body.style.color = "#000";
     document.querySelector("style").textContent +=
-    "@media screen and (max-width:999px) { .navbar-collapse ul { background-color: #f4f4ff; }}";
+      "@media screen and (max-width:999px) { .navbar-collapse ul { background-color: #f4f4ff; }}";
     $(".nav-link").css("color", "#000");
     // $(".navbar-collapse ul").css("background-color", "#f4f4ff");
     $(".about h2").css("color", "#000");
@@ -40,7 +38,7 @@ function myFunction() {
     document.body.style.background = "black";
     document.body.style.color = "#FFF";
     document.querySelector("style").textContent +=
-    "@media screen and (max-width:999px) { .navbar-collapse ul { background-color: #000; }}";
+      "@media screen and (max-width:999px) { .navbar-collapse ul { background-color: #000; }}";
     $(".nav-link").css("color", "#FFF");
     // $(".navbar-collapse ul").css("background-color", "#000");
     $(".about h2").css("color", "#FFF");
@@ -106,16 +104,19 @@ function openCity(evt, cityName) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 
-
-
 //Get the button
 var mybutton = document.getElementById("myBtn");
 
 // When the user scrolls down 800px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () {
+  scrollFunction();
+};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+  if (
+    document.body.scrollTop > 800 ||
+    document.documentElement.scrollTop > 800
+  ) {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";
@@ -155,57 +156,58 @@ function topFunction() {
 //     $(".card-body").css("display", "none");
 //     $(".card").css("border", "none");
 //     $(this).css("border-radius", "12px 12px 12px 12px");
-//   });	
+//   });
 // });
 
-$(document).ready(function() {
-  $(".card").hover(function(){
-    $(this).children("div").css("display", "block");
-    $(this).css("border", "1px solid #DDD");
-    $(this).children("img").css("border-radius", "12px 12px 0px 0px");
-    $(this).children("img").css("width", "100%");
-    $(this).children("img").css("box-shadow", "none");
-  }, function(){
-    $(this).children("div").css("display", "none");
-    $(this).css("border", "none");
-    $(this).children("img").css("border-radius", "12px 12px 12px 12px");
-    $(this).children("img").css("width", "80%");
-    $(this).children("img").css("box-shadow", "5px 5px 5px #DDD");
-  });	
+$(document).ready(function () {
+  $(".card").hover(
+    function () {
+      $(this).children("div").css("display", "block");
+      $(this).css("border", "1px solid #DDD");
+      $(this).children("img").css("border-radius", "12px 12px 0px 0px");
+      $(this).children("img").css("width", "100%");
+      $(this).children("img").css("box-shadow", "none");
+    },
+    function () {
+      $(this).children("div").css("display", "none");
+      $(this).css("border", "none");
+      $(this).children("img").css("border-radius", "12px 12px 12px 12px");
+      $(this).children("img").css("width", "80%");
+      $(this).children("img").css("box-shadow", "5px 5px 5px #DDD");
+    }
+  );
 });
 
-(function ($){
-  $.fn.counter = function() {
+(function ($) {
+  $.fn.counter = function () {
     const $this = $(this),
-    numberFrom = parseInt($this.attr('data-from')),
-    numberTo = parseInt($this.attr('data-to')),
-    delta = numberTo - numberFrom,
-    deltaPositive = delta > 0 ? true : false,
-    time = parseInt($this.attr('data-time')),
-    changeTime = 10;
-    
+      numberFrom = parseInt($this.attr("data-from")),
+      numberTo = parseInt($this.attr("data-to")),
+      delta = numberTo - numberFrom,
+      deltaPositive = delta > 0 ? true : false,
+      time = parseInt($this.attr("data-time")),
+      changeTime = 10;
+
     let currentNumber = numberFrom,
-    value = delta*changeTime/time;
+      value = (delta * changeTime) / time;
     var interval1;
     const changeNumber = () => {
       currentNumber += value;
       //checks if currentNumber reached numberTo
-      (deltaPositive && currentNumber >= numberTo) || (!deltaPositive &&currentNumber<= numberTo) ? currentNumber=numberTo : currentNumber;
+      (deltaPositive && currentNumber >= numberTo) ||
+      (!deltaPositive && currentNumber <= numberTo)
+        ? (currentNumber = numberTo)
+        : currentNumber;
       this.text(parseInt(currentNumber));
-      currentNumber == numberTo ? clearInterval(interval1) : currentNumber;  
-    }
+      currentNumber == numberTo ? clearInterval(interval1) : currentNumber;
+    };
 
-    interval1 = setInterval(changeNumber,changeTime);
-  }
-}(jQuery));
+    interval1 = setInterval(changeNumber, changeTime);
+  };
+})(jQuery);
 
-$(document).ready(function(){
-
-  $('.count-up').counter();
-  $('.count1').counter();
-  $('.count2').counter();
-  
-  new WOW().init();
+$(document).ready(function () {
+  $(".count-up").counter();
+  $(".count1").counter();
+  $(".count2").counter();
 });
-
-

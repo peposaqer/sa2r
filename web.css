@@ -16,7 +16,7 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #009BDB;
+  background: #dc3545;
   border-radius: 10px;
 }
 
@@ -46,24 +46,25 @@ body {
 
 nav {
   height: 80px;
-  background-image: linear-gradient( to right, rgb(65, 165, 247), #FFF);
+  /* background-image: linear-gradient(to right, rgb(65, 165, 247), #FFF); */
+  background-color: #dcdfe0;
   border-radius: 0px 0px 50px 50px;
-  position: fixed;
-    top: 0;
-    height: 80px;
-    width: 100vw;
-    z-index: 5;
+  position: fixed !important;
+  top: 0;
+  height: 80px;
+  width: 100vw;
+  z-index: 5;
 }
 
 .nav-link.active {
-  color: rgb(65, 165, 247) !important;
-  border-bottom: 4px solid rgb(65, 165, 247);
+  color: #dc3545 !important;
+  border-bottom: 4px solid #dc3545;
   font-weight: bold;
 }
 
 .nav-link:hover {
-  color: rgb(65, 165, 247) !important;
-  border-bottom: 4px solid rgb(65, 165, 247);
+  color: #dc3545 !important;
+  border-bottom: 4px solid #dc3545;
   transition: ease-in-out .2s;
   font-weight: bold;
 }
@@ -108,11 +109,11 @@ nav {
 }
 
 input:checked+.slider {
-  background-color: #2196F3;
+  background-color: #c1b9b9;
 }
 
 input:focus+.slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #c1b9b9;
 }
 
 input:checked+.slider:before {
@@ -130,11 +131,11 @@ input:checked+.slider:before {
 
 .fa-times {
   display: none;
-  color: #2196F3;
+  color: #c1b9b9;
 }
 
 .fa-bars {
-  color: #2196F3;
+  color: #c1b9b9;
 }
 
 @media (max-width: 999px) {
@@ -173,33 +174,34 @@ input:checked+.slider:before {
 
 
 
-#video{    
-  width: 100vw; 
+#video {
+  width: 100vw;
   height: 100vh;
   margin: auto;
   display: block;
 }
+
 @media (min-aspect-ratio: 16/9) {
-#video{
-  width: 100vw; 
-  height:auto;
-}
+  #video {
+    width: 100vw;
+    height: auto;
+  }
 }
 
 @media (max-aspect-ratio: 16/9) {
-#video {
-  height: 100vh; 
-  width:auto;
-  margin-left: 50vw;
-  transform: translate(-50%);
-}
+  #video {
+    height: 100vh;
+    width: auto;
+    margin-left: 50vw;
+    transform: translate(-50%);
+  }
 }
 
-#videoMessage{
-  width: 100%; 
+#videoMessage {
+  width: 100%;
   height: 100%;
-  position: absolute; 
-  top: 0; 
+  position: absolute;
+  top: 0;
   left: 0;
   display: flex;
   justify-content: center;
@@ -248,7 +250,7 @@ input:checked+.slider:before {
 }
 
 .progress-bar {
-  background-color: #2196F3;
+  background-color: #c1b9b9;
   font-weight: bold;
   font-size: 14px;
 }
@@ -261,11 +263,11 @@ input:checked+.slider:before {
 .skills h1 {
   font-size: 60px;
   font-weight: bold;
-	background: linear-gradient(to right, #FFF 20%, #2196F3 80%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+  background: linear-gradient(to right, #FFF 20%, #fc1a1a 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 3rem;
-  border-right: 2px solid #2196F3;
+  border-right: 2px solid #c1b9b9;
   overflow: hidden;
   white-space: nowrap;
   animation: control-width 3s steps(6) .5s both, blink 0.5s infinite;
@@ -282,8 +284,8 @@ input:checked+.slider:before {
   background-color: #FFF;
   padding-top: 3rem;
   padding-bottom: 3em;
-  border-top: 4px solid #2196F3;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.534) , rgba(255, 255, 255, 0.5)),  url("img/3.jpg");
+  border-top: 4px solid #c1b9b9;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.534), rgba(255, 255, 255, 0.5)), url("img/3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -298,10 +300,10 @@ input:checked+.slider:before {
   font-size: 60px;
   font-weight: bold;
   /* text-shadow: 9px 9px 5px rgba(81, 209, 248, 0.722); */
-	background: linear-gradient(to right, #FFF 20%, #2196F3 80%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-  border-right: 2px solid #2196F3;
+  background: linear-gradient(to right, #FFF 20%, #fc1a1a 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-right: 2px solid #c1b9b9;
   overflow: hidden;
   white-space: nowrap;
   animation: control-width 3s steps(8) .5s both, blink 0.5s infinite;
@@ -311,7 +313,7 @@ input:checked+.slider:before {
 .about i {
   font-size: 20px;
   padding: 1rem;
-  background-color: #2196F3;
+  background-color: #c1b9b9;
   margin-right: .8rem;
   border-radius: 12px;
   box-shadow: 2px 2px 5px #000;
@@ -341,7 +343,7 @@ input:checked+.slider:before {
 }
 
 .about img:hover {
-  box-shadow: 3px 3px 15px #2196F3;
+  box-shadow: 3px 3px 15px #c1b9b9;
   transform: scale(1.2);
   width: 75%;
   height: 75%;
@@ -377,11 +379,10 @@ input:checked+.slider:before {
   background-color: transparent !important;
   border-radius: 50% !important;
   font-size: 25px !important;
-  border: 1px solid #DDD !important;
-  color: #2196F3;
+  color: #c1b9b9;
   box-shadow: none !important;
   margin-bottom: 1rem;
-  margin-left: 1rem ;
+  margin-left: 1rem;
   padding: 0 !important;
   width: 50px;
   height: 50px;
@@ -391,16 +392,16 @@ input:checked+.slider:before {
 }
 
 .social i:hover {
-  background-color: #2196F3 !important;
-  color: #FFF;
+  /* background-color: #c1b9b9 !important; */
+  /* color: #FFF; */
   transform: scale(1.4);
 }
 
 .about h1 span {
-  color: #2196F3;
+  color: #c1b9b9;
   font-size: 60px;
   margin: 0 !important;
-  /* border-bottom: 5px dashed #2196F3; */
+  /* border-bottom: 5px dashed #c1b9b9; */
 }
 
 .Services {
@@ -412,10 +413,10 @@ input:checked+.slider:before {
 .Services h1 {
   font-size: 60px;
   font-weight: bold;
-	background: linear-gradient(to right, #FFF 20%, #2196F3 80%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-  border-right: 2px solid #2196F3;
+  background: linear-gradient(to right, #FFF 20%, #fc1a1a 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-right: 2px solid #c1b9b9;
   overflow: hidden;
   white-space: nowrap;
   animation: control-width 3s steps(8) .5s both, blink 0.5s infinite;
@@ -423,7 +424,7 @@ input:checked+.slider:before {
 }
 
 .Services .ser {
-  background-color: #2196F3;
+  background-color: #c1b9b9;
   padding: 3rem 1rem 3rem 1rem;
   margin-top: 2rem;
   transition: all .5s;
@@ -440,7 +441,7 @@ input:checked+.slider:before {
 
 .ser h2 {
   font-size: 35px;
-  /* color: #2196F3; */
+  /* color: #c1b9b9; */
   font-weight: bold;
 }
 
@@ -456,7 +457,7 @@ input:checked+.slider:before {
 
 /* Style the buttons inside the tab */
 .tab button {
-  color: #2196F3;
+  color: #c1b9b9;
   border: none;
   width: 40%;
   padding: 1rem;
@@ -469,13 +470,13 @@ input:checked+.slider:before {
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #2196F3;
+  background-color: #c1b9b9;
   color: #FFF;
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-  background-color: #2196F3;
+  background-color: #c1b9b9;
   color: #FFF;
 }
 
@@ -490,10 +491,10 @@ input:checked+.slider:before {
 .Resume .h1 {
   font-size: 60px;
   font-weight: bold;
-	background: linear-gradient(to right, #FFF 20%, #2196F3 80%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-  border-right: 2px solid #2196F3;
+  background: linear-gradient(to right, #FFF 20%, #fc1a1a 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-right: 2px solid #c1b9b9;
   overflow: hidden;
   white-space: nowrap;
   animation: control-width 3s steps(6) .5s both, blink 0.5s infinite;
@@ -501,7 +502,7 @@ input:checked+.slider:before {
 }
 
 .res {
-  background-color: #2196F3;
+  background-color: #c1b9b9;
   padding: 3rem 1rem 3rem 1rem;
   margin-top: 2rem;
   transition: all .5s;
@@ -513,7 +514,7 @@ input:checked+.slider:before {
 .res h1 {
   font-size: 30px;
   text-shadow: none;
-  color: #dcdfe0;
+  color: #000;
 }
 
 .res h2 {
@@ -529,7 +530,7 @@ input:checked+.slider:before {
 .res h3 a {
   font-size: 18px;
   font-weight: bold;
-  color: #dcdfe0;
+  color: #000;
 }
 
 .res:hover {
@@ -539,7 +540,7 @@ input:checked+.slider:before {
 }
 
 .icon-i {
-  background-color: #2196F3;
+  background-color: #c1b9b9;
   width: 150px;
   height: 150px;
   display: flex;
@@ -583,20 +584,20 @@ input:checked+.slider:before {
 }
 
 .contact h1 span {
-  color: #2196F3;
+  color: #c1b9b9;
   font-size: 60px;
   margin: 0 !important;
-  /* border-bottom: 5px dashed #2196F3; */
+  /* border-bottom: 5px dashed #c1b9b9; */
 }
 
 .contact h1 {
   font-size: 60px;
   margin-bottom: 2rem !important;
   font-weight: bold;
-	background: linear-gradient(to right, #FFF 20%, #2196F3 80%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-  border-right: 2px solid #2196F3;
+  background: linear-gradient(to right, #FFF 20%, #fc1a1a 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-right: 2px solid #c1b9b9;
   overflow: hidden;
   white-space: nowrap;
   animation: control-width 3s steps(9) .5s both, blink 0.5s infinite;
@@ -607,14 +608,17 @@ input:checked+.slider:before {
   from {
     width: 0;
   }
+
   to {
     width: 410px;
   }
 }
+
 @keyframes blink {
   from {
-    border-right-color: #2196F3;
+    border-right-color: #df4848;
   }
+
   to {
     border-right-color: transparent;
   }
@@ -623,7 +627,7 @@ input:checked+.slider:before {
 .footer-about h1 {
   font-size: 24px;
   font-weight: bold;
-  color: #2196F3;
+  color: #c1b9b9;
   margin-bottom: 2rem;
 }
 
@@ -641,7 +645,7 @@ input:checked+.slider:before {
   justify-content: center;
   align-items: center;
   margin-bottom: 1rem;
-  color: #2196F3;
+  color: #c1b9b9;
   transition: all .5s;
   cursor: pointer;
   margin-right: 0;
@@ -650,7 +654,7 @@ input:checked+.slider:before {
 
 
 .social-footer i:hover {
-  background-color: #2196F3 !important;
+  background-color: #c1b9b9 !important;
   color: #FFF;
   transform: scale(1.4);
 }
@@ -665,7 +669,7 @@ input:checked+.slider:before {
 
 .footer-links a {
   text-decoration: none;
-  color: #2196F3;
+  color: #c1b9b9;
   font-weight: bold;
 
 }
@@ -673,7 +677,7 @@ input:checked+.slider:before {
 .links h1 {
   font-size: 24px;
   font-weight: bold;
-  color: #2196F3;
+  color: #c1b9b9;
   margin-bottom: 2rem;
 }
 
@@ -682,15 +686,24 @@ input:checked+.slider:before {
 }
 
 .links a:after {
-  display:block;
+  display: block;
   content: '';
-  border-bottom: solid 3px #2196F3;  
-  transform: scaleX(0);  
+  border-bottom: solid 3px #c1b9b9;
+  transform: scaleX(0);
   transition: transform 250ms ease-in-out;
 }
-.links a:hover:after { transform: scaleX(1); }
-.links a.fromRight:after{ transform-origin:100% 50%; }
-.links a.fromLeft:after{  transform-origin:  0% 50%; }
+
+.links a:hover:after {
+  transform: scaleX(1);
+}
+
+.links a.fromRight:after {
+  transform-origin: 100% 50%;
+}
+
+.links a.fromLeft:after {
+  transform-origin: 0% 50%;
+}
 
 
 .have-icon {
@@ -698,20 +711,20 @@ input:checked+.slider:before {
 }
 
 .have-icon a {
-  color: #2196F3;
+  color: #c1b9b9;
   text-decoration: none;
   font-weight: bold;
 }
 
 .copy {
   text-align: center;
-  margin-top: 5rem; 
+  margin-top: 5rem;
 }
 
 .copy p {
   font-size: 12px;
   color: rgb(119, 117, 117);
-  font-weight: bold;  
+  font-weight: bold;
   margin-top: 2rem;
 }
 
@@ -727,7 +740,7 @@ input:checked+.slider:before {
 .top i:hover {
   font-size: 25px;
   padding: 1rem;
-  /* background-color: #2196F3; */
+  /* background-color: #c1b9b9; */
   position: fixed;
   bottom: 3rem;
   right: 2rem;
@@ -737,10 +750,12 @@ input:checked+.slider:before {
 }
 
 @keyframes pulse {
+
   0%,
   100% {
     animation-timing-function: ease-in;
   }
+
   50% {
     transform: scale(1.2);
   }
@@ -769,6 +784,9 @@ a {
 
 .card img {
   width: 80%;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: auto;
   transition: all 1.5s;
   border-radius: 12px 12px 12px 12px;
@@ -784,22 +802,22 @@ a {
 .card-body {
   display: none;
   transition: all 1.5s;
-  border-top: 5px solid #2196F3;
+  border-top: 5px solid #c1b9b9;
 }
 
 .card h5 {
   font-size: 26px;
   font-weight: bold;
-  color: #2196F3;
+  color: #dc3545;
 }
 
 .project h1 {
   font-size: 60px;
   font-weight: bold;
-	background: linear-gradient(to right, #FFF 20%, #2196F3 80%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-  border-right: 2px solid #2196F3;
+  background: linear-gradient(to right, #FFF 20%, #fc1a1a 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-right: 2px solid #c1b9b9;
   overflow: hidden;
   white-space: nowrap;
   animation: control-width 3s steps(6) .5s both, blink 0.5s infinite;
@@ -828,7 +846,7 @@ a {
 
 .counter {
   text-align: center;
-  background-color: #2196F3;
+  background-color: #c1b9b9;
   border-radius: 20px;
   padding: 1rem;
   color: #FFF;
@@ -858,7 +876,7 @@ a {
   color: #dc3545;
 }
 
-h1::before {  
+h1::before {
   transform: scaleX(0);
   transform-origin: bottom right;
 }
@@ -872,9 +890,12 @@ h1::before {
   content: " ";
   display: block;
   position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   inset: 0 0 0 0;
-  background: hsl(200 100% 80%);
+  background: hsl(000 100% 80%);
   z-index: -1;
   transition: transform .8s ease;
 }
@@ -890,23 +911,26 @@ h1 {
   }
 }
 
-.card::before {  
+.card::before {
   transform: scaleX(0);
-  transform-origin: bottom right;
+  transform-style: bottom right;
 }
 
 .card:hover::before {
   transform: scaleX(1);
-  transform-origin: bottom left;
+  transform-style: bottom left;
 }
 
 .card::before {
   content: " ";
   display: block;
   position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   inset: 0 0 0 0;
-  background: hsl(200 100% 80%);
+  background: hsl(256, 5%, 80%, 1);
   z-index: -1;
   transition: transform .8s ease;
   border-radius: 12px;
@@ -916,3 +940,47 @@ h1 {
   position: relative;
 }
 
+.fa-facebook {
+  color: #1877F2 !important;
+  border: 1px solid #1877F2 !important;
+}
+
+.fa-instagram {
+  color: #E4405F !important;
+  border: 1px solid #E4405F !important;
+}
+
+.fa-twitter {
+  color: #1DA1F2 !important;
+  border: 1px solid #1DA1F2 !important;
+}
+
+.fa-snapchat {
+  color: #FFFC00 !important;
+  border: 1px solid #FFFC00 !important;
+}
+
+.fa-github {
+  color: #333 !important;
+  border: 1px solid #333 !important;
+}
+
+.fa-stack-overflow {
+  color: #f48024 !important;
+  border: 1px solid #f48024 !important;
+}
+
+.fa-linkedin {
+  color: #0A66C2 !important;
+  border: 1px solid #0A66C2 !important;
+}
+
+.fa-code {
+  color: #f00 !important;
+  border: 1px solid #f00 !important;
+}
+
+.fa-wordpress-simple {
+  color: #0A66C2 !important;
+  border: 1px solid #0A66C2 !important;
+}
